@@ -3,7 +3,8 @@ package com.example.proyecto_universidad.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.antlr.v4.runtime.misc.NotNull;
+
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -25,4 +26,13 @@ public class Estudiante {
     private String correo;
     @Column(name = "password")
     private String password;
+
+
+    @ManyToMany
+    @JoinTable(
+            name = "estudiantes_asignaturas",
+            joinColumns = @JoinColumn(name = "estudiante_id"),
+            inverseJoinColumns = @JoinColumn(name = "asignatura_id")
+    )
+    private List<Asignatura> asignaturas;
 }
