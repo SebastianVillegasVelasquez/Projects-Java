@@ -2,15 +2,14 @@ package com.example.proyecto_universidad.models;
 
 
 import jakarta.persistence.*;
-import lombok.*;
-
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Table(name = "estudiantes")
 public class Estudiante {
 
@@ -26,13 +25,4 @@ public class Estudiante {
     private String correo;
     @Column(name = "password")
     private String password;
-
-
-    @ManyToMany
-    @JoinTable(
-            name = "estudiantes_asignaturas",
-            joinColumns = @JoinColumn(name = "estudiante_id"),
-            inverseJoinColumns = @JoinColumn(name = "asignatura_id")
-    )
-    private List<Asignatura> asignaturas;
 }
