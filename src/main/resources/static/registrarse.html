@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/registrarse.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="formulario">
+            <h2 class="titulo-formulario">Registrarse</h2>
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre</label>
+                <div class="grupo-input">
+                    <input type="text" id="nombre" placeholder="Jhon Doe" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+            <div class="grupo-formulario">
+                <label for="apellido">Apellido</label>
+                <div class="grupo-input">
+                    <input type="text" id="apellido" required>
+                </div>
+            </div>
+            <div class="grupo-formulario">
+                <label for="correo">Correo</label>
+                <div class="grupo-input">
+                    <input type="email" id="correo" required placeholder="correo@correo.com">
+                    <i class='bx bxs-envelope'></i>
+                </div>
+            </div>
+            <div class="grupo-formulario">
+                <label for="password">Contraseña</label>
+                <div class="grupo-input">
+                    <input type="password" id="password" required >
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+            </div>
+            <div class="recordar">
+                <label for="recordar"><input type="checkbox" name="recordar" id="recordad">Recuerdame</label>
+                <a href="">¿Olvidó su contraseña?</a>
+            </div>
+            <div class="btn-enviar">
+                <button type="submit">Registrarse</button>
+            </div>
+            <div class="link-registrarse">
+                <a href="#">¿Ya tiene una cuenta?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

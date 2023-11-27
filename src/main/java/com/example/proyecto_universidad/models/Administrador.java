@@ -1,24 +1,21 @@
 package com.example.proyecto_universidad.models;
 
 import jakarta.persistence.*;
-<<<<<<< HEAD
 import lombok.*;
-=======
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
->>>>>>> origin/main
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-<<<<<<< HEAD
 @Getter
 @Setter
-=======
-@Data
->>>>>>> origin/main
-@Table(name = "administradores")
+@Table(name = "administradores",
+        uniqueConstraints = @UniqueConstraint(
+                name = "email_unique",
+                columnNames = "correo"
+        ))
+
 public class Administrador {
 
     @Id
@@ -26,7 +23,8 @@ public class Administrador {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "correo")
+    @Column(name = "correo",
+    nullable = false)
     private String correo;
 
     @Column(name = "password")

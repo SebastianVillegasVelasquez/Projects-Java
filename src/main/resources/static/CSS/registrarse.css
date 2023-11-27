@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 2, 25);
+    background: linear-gradient(90deg, rgba(0, 2, 25, 1) 0%, rgba(32, 12, 64, 1) 50%);
+    min-height: 90vh;
+}
+
+.wrapper {
+    width: 50px;
+    color: #fff;
+    height: 550px;
+    width: 350px;
+    border: 2px solid rgb(255, 255, 255, .1);
+    border-radius: px;
+}
+
+#formulario {
+    padding: 40px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#formulario>.titulo-formulario {
+    text-align: center;
+    font-size: 28px;
+    animation: color 2s linear infinite;
+
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.titulo-formulario {
+    background-image: linear-gradient(90deg, #573aad, #0707dd);
+    background-size: 200% 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: colorChange 5s infinite alternate;
+}
+
+.grupo-formulario {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.grupo-input>input {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 20px 45px 20px 13px;
+    color: #fff;
+}
+
+.grupo-input>input::placeholder {
+    color: #fff;
+}
+
+.grupo-input i {
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+    font-size: 20px;
+}
+
+#formulario>.recordar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 10px 0px;
+}
+
+#formulario>.recordar a:hover {
+    opacity: .6;
+}
+
+.recordar label input {
+    accent-color: #fff;
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+}
+
+#formulario>.btn-enviar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    margin: 5px;
+}
+
+.btn-enviar>button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    border: 2px solid rgb(255, 255, 255, .2);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-enviar button:hover{
+    opacity: .6;
+    color: black;
+    background-color: #fff;
+}
+
+.link-registrarse:hover{
+    opacity: .6;
+}

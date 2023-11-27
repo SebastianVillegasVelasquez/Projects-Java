@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.antlr.v4.runtime.misc.NotNull;
+
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -31,4 +34,15 @@ public class Asignatura {
     @Column(name = "cupo_estudiantes")
     private int cupo_estudiantes;
 
+    @ManyToOne
+    @JoinColumn(name = "profesor_id",
+    nullable = false)
+    private Profesor profesor;
+
+    @ManyToMany
+    @JoinTable(
+            name = "estudiante_asignatura",
+            joinColumns = @JoinColumn(name = "asignatura_id"),
+            inverseJoinColumns = @JoinColumn(name = "estudiante_id"))
+    private List<Estudiante> estudiantes;
 }
