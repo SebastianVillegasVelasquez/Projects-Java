@@ -1,0 +1,16 @@
+package com.example.proyecto_universidad.controllers;
+
+import com.example.proyecto_universidad.services.AsignaturaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/v1/asignaturas")
+public class AsignaturaController {
+
+    @Autowired
+    private AsignaturaService asignaturaService;
+
+
+}

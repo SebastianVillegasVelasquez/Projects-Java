@@ -30,8 +30,5 @@ class EstudianteRepositoryTest {
         System.out.println("Estudiante " + estudiante);
     }
 
-    @Test
-    public void findAll(){
-        System.out.println(estudianteRepository.findAll());
-    }
+
 }
