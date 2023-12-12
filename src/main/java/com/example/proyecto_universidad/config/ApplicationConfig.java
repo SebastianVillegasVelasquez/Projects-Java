@@ -1,21 +1,15 @@
 package com.example.proyecto_universidad.config;
 
-import com.example.proyecto_universidad.repositories.AdministradorReposityory;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-    private final AdministradorReposityory administradorReposityory;
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) {
 
-    @Bean
-    public UserDetailsService loadByUsername() {
-        return username -> administradorReposityory.findByCorreo(username)
-                .orElseThrow(() -> new UsernameNotFoundException("user not found"));
     }
 }

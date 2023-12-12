@@ -21,9 +21,9 @@ public class AsignaturaService {
     }
 
     //Obtener asignatura por nombre
-    public Optional<Asignatura> asignaturaByNombre(String nombre_Asignatura) {
-        return asignaturaRepository.findByNombre_asignatura(nombre_Asignatura);
-    }
+//    public Optional<Asignatura> asignaturaByNombre(String nombre_Asignatura) {
+//        return asignaturaRepository.findByNombre_asignatura(nombre_Asignatura);
+//    }
 
     //Crear asignatura
     public Asignatura crearAsignatura(Asignatura asignatura) {
